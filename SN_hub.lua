@@ -89,16 +89,6 @@ Tab:AddTextbox({
 
 })
 
-FunctionTab:AddToggle({
-    Name = "夜视",
-    Default = false,
-    Callback = function(enabled)
-        Lighting.Ambient = enabled and Color3.new(0.5, 0.5, 0.5) or Color3.new(0, 0, 0)
-        Lighting.Brightness = enabled and 2 or 1
-    end,
-    Color = Color3.fromRGB(255, 165, 0)
-})
-
 Tab:AddButton({
 	Name = "退出游戏",
 	Callback = function()
