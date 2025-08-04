@@ -53,7 +53,7 @@ local Tab = Window:MakeTab({
 
 local Section = Tab:AddSection({
 
-	Name = "缝合"
+	Name = "玩家属性"
 
 })
 
@@ -61,5 +61,41 @@ Tab:AddButton({
 	Name = "自杀",
 	Callback = function()
      game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid").Health = 0
+        end
+})
+
+local Tab = Window:MakeTab({
+
+    Name = "死铁",
+
+    Icon = "rbxassetid://4483345998",
+
+    PremiumOnly = false
+
+})
+
+local Section = Tab:AddSection({
+
+	Name = "scripts"
+
+})
+
+Tab:AddButton({
+	Name = "全自动刷债券",
+	Callback = function()
+     getgenv().BondFarmSetting = {
+	Fast_Auto_Execute = true, -- Use queue_on_teleport to execute faster than your executor itself 
+	Number_Of_Bonds_Targeted = 9e9, -- When your bonds reached the number you wanted, the will script automatically be stopped
+	Tween_Duration = 23, -- The smaller number, the faster it goes (best is 23)
+	Webhook_Url = "none",
+	Main_Auto_SHOP_Delay = 70, -- auto server hop after time ended in main game
+	Lobby_Auto_SHOP_Delay = 25, -- auto server hop after time ended in lobby
+	Goto_Party_By_Walking_Only = false, -- if you set to false, it instantly teleport you to party creator, else it make you walk to party creator 
+	Blackscreen_Save_Battery = true,
+	Show_Bonds_Collected_On_Blackscreen = false
+}
+SaveNewSettings = true 
+script_key = "DonjoSx_Was_Not_Here" -- Script key, don't remove this
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Umbrella-Scripter/Deadrails-Script/refs/heads/main/average-bond-farm.lua"))()
         end
 })
