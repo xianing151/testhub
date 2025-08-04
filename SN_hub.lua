@@ -57,6 +57,30 @@ local Section = Tab:AddSection({
 
 })
 
+Tab:AddSlider({
+
+	Name = "速度",
+
+	Min = 16,
+
+	Max = 200,
+
+	Default = 16,
+
+	Color = Color3.fromRGB(255,255,255),
+
+	Increment = 1,
+
+	ValueName = "移动速度",
+
+	Callback = function(Value)
+
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+
+	end    
+
+})
+
 Tab:AddButton({
 	Name = "退出游戏",
 	Callback = function()
