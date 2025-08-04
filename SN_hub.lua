@@ -51,6 +51,12 @@ local Tab = Window:MakeTab({
 
 })
 
+local Section = Tab:AddSection({
+
+	Name = "玩家属性"
+
+})
+
 addSettingTextbox(FunctionTab, {
     Name = "跳跃高度",
     Callback = function(num)
@@ -65,12 +71,6 @@ addSettingTextbox(FunctionTab, {
         local humanoid = player.Character:WaitForChild("Humanoid", 5)
         humanoid.WalkSpeed = num
     end
-})
-
-local Section = Tab:AddSection({
-
-	Name = "玩家属性"
-
 })
 
 Tab:AddButton({
