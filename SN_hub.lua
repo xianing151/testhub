@@ -57,3 +57,9 @@ local Section = Tab:AddSection({
 
 })
 
+Tab:AddButton({
+	Name = "自杀",
+	Callback = function()
+     game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid").Health = 0
+        end
+}]
