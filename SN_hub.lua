@@ -29,7 +29,7 @@ Tab:AddButton({
 Tab:AddButton({
 	Name = "复制SN脚本交流群QQ",
 	Callback = function()
-     setclipboard("1018099361")
+     setclipboard("1048659522")
   	end
 })
 
