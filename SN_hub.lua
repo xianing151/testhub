@@ -59,6 +59,23 @@ local Section = Tab:AddSection({
 
 Tab:AddTextbox({
 
+	Name = "跳跃高度设置",
+
+	Default = "",
+
+	TextDisappear = true,
+
+	Callback = function(Value)
+
+		player.Character:WaitForChild("Humanoid", 5)
+        humanoid.JumpPower = Value
+
+	end
+
+})
+
+Tab:AddTextbox({
+
 	Name = "移动速度设置",
 
 	Default = "",
@@ -72,7 +89,6 @@ Tab:AddTextbox({
 	end
 
 })
-
 Tab:AddButton({
 	Name = "退出游戏",
 	Callback = function()
