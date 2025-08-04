@@ -62,4 +62,4 @@ Tab:AddButton({
 	Callback = function()
      game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid").Health = 0
         end
-}]
+})
