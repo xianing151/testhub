@@ -57,29 +57,6 @@ local Section = Tab:AddSection({
 
 })
 
-addSettingTextbox(FunctionTab, {
-    Name = "跳跃高度",
-    Callback = function(num)
-        local humanoid = player.Character:WaitForChild("Humanoid", 5)
-        humanoid.JumpPower = num
-    end
-})
-
-addSettingTextbox(FunctionTab, {
-    Name = "移动速度",
-    Callback = function(num)
-        local humanoid = player.Character:WaitForChild("Humanoid", 5)
-        humanoid.WalkSpeed = num
-    end
-})
-
-Tab:AddButton({
-	Name = "自杀",
-	Callback = function()
-     game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid").Health = 0
-        end
-})
-
 Tab:AddButton({
 	Name = "退出游戏",
 	Callback = function()
