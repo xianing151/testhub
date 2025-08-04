@@ -51,6 +51,22 @@ local Tab = Window:MakeTab({
 
 })
 
+addSettingTextbox(FunctionTab, {
+    Name = "跳跃高度",
+    Callback = function(num)
+        local humanoid = player.Character:WaitForChild("Humanoid", 5)
+        humanoid.JumpPower = num
+    end
+})
+
+addSettingTextbox(FunctionTab, {
+    Name = "移动速度",
+    Callback = function(num)
+        local humanoid = player.Character:WaitForChild("Humanoid", 5)
+        humanoid.WalkSpeed = num
+    end
+})
+
 local Section = Tab:AddSection({
 
 	Name = "玩家属性"
