@@ -57,27 +57,19 @@ local Section = Tab:AddSection({
 
 })
 
-Tab:AddSlider({
+Tab:AddTextbox({
 
-	Name = "速度",
+	Name = "移动速度设置",
 
-	Min = 16,
+	Default = "",
 
-	Max = 200,
-
-	Default = 16,
-
-	Color = Color3.fromRGB(255,255,255),
-
-	Increment = 1,
-
-	ValueName = "移动速度",
+	TextDisappear = true,
 
 	Callback = function(Value)
 
 		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
 
-	end    
+	end
 
 })
 
