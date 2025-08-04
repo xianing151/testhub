@@ -64,6 +64,13 @@ Tab:AddButton({
         end
 })
 
+Tab:AddButton({
+	Name = "退出游戏",
+	Callback = function()
+     game.Players.LocalPlayer:Kick("👻👻👻")
+        end
+})
+
 local Tab = Window:MakeTab({
 
     Name = "死铁",
